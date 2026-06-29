@@ -1,14 +1,6 @@
 pipeline {
     agent any
 
-    parameters {
-        choice(
-            name: 'ENVIRONMENT',
-            choices: ['dev', 'stg', 'prod'],
-            description: 'Select the environment'
-        )
-    }
-
     stages {
         stage('Hello World') {
             steps {
